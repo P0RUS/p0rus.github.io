@@ -28,10 +28,18 @@ export default function Home() {
         <div className="orbit orbit-one" />
         <div className="orbit orbit-two" />
 
-        <div className="hermes-placeholder">
-          <span>HERMES</span>
-          <small>The first question.</small>
-        </div>
+        <div className="hermes-world">
+  <div className="hermes-glow" />
+
+  <div className="hermes-planet">
+    <div className="hermes-light" />
+  </div>
+  <div className="hermes-ring" />
+  <div className="hermes-label">
+    <span>HERMES</span>
+    <small>The first question.</small>
+  </div>
+</div>
       </section>
     </main>
   );

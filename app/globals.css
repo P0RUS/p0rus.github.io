@@ -136,14 +136,99 @@ body {
   transform: translate(-50%, -50%) rotate(18deg);
 }
 
-.hermes-placeholder {
+/* --------------------------------------------------
+   HERMES
+-------------------------------------------------- */
+
+.hermes-world {
   position: absolute;
   left: 68%;
   top: 42%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
+  width: 18rem;
+  height: 18rem;
   transform: translate(-50%, -50%);
+}
+
+.hermes-glow {
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  background: rgba(180, 135, 75, 0.08);
+  filter: blur(35px);
+}
+
+.hermes-planet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      #d8b879 0%,
+      #a77b42 32%,
+      #62472d 68%,
+      #30271f 100%
+    );
+
+  box-shadow:
+    inset -1.5rem -1rem 2rem rgba(0, 0, 0, 0.45),
+    0 0 3rem rgba(180, 135, 75, 0.08);
+}
+
+.hermes-light {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 28% 25%,
+      rgba(255, 245, 215, 0.35),
+      transparent 28%
+    );
+}
+
+.hermes-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid rgba(216, 184, 121, 0.18);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  pointer-events: none;
+}
+
+.hermes-label {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-left: 2rem;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.hermes-label span {
+  display: block;
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.hermes-label small {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
 }
 
 .hermes-placeholder span {
@@ -157,4 +242,37 @@ body {
   color: var(--muted);
   font-family: var(--font-display);
   font-size: 0.95rem;
+}
+
+.orbit-one {
+  width: 110vw;
+  height: 55vw;
+  animation: orbit-drift 40s linear infinite;
+}
+
+.orbit-two {
+  width: 75vw;
+  height: 38vw;
+  border-color: rgba(243, 240, 232, 0.055);
+  animation: orbit-drift-reverse 55s linear infinite;
+}
+
+@keyframes orbit-drift {
+  from {
+    transform: translate(-50%, -50%) rotate(-12deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(348deg);
+  }
+}
+
+@keyframes orbit-drift-reverse {
+  from {
+    transform: translate(-50%, -50%) rotate(18deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-342deg);
+  }
 }
