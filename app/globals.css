@@ -161,37 +161,11 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
   transform: translate(-50%, -50%);
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 32% 28%,
-      #d8b879 0%,
-      #a77b42 32%,
-      #62472d 68%,
-      #30271f 100%
-    );
-
-  box-shadow:
-    inset -1.5rem -1rem 2rem rgba(0, 0, 0, 0.45),
-    0 0 3rem rgba(180, 135, 75, 0.08);
-}
-
-.hermes-light {
-  position: absolute;
-  inset: 0;
   border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle at 28% 25%,
-      rgba(255, 245, 215, 0.35),
-      transparent 28%
-    );
+  overflow: hidden;
 }
 
 .hermes-ring {

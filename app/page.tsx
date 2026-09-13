@@ -1,5 +1,6 @@
 import StarField from "@/components/StarField";
 import PantheonScroll from "@/components/PantheonScroll";
+import HermesWorld from "@/components/HermesWorld";
 
 export default function Home() {
   return (
@@ -32,8 +33,8 @@ export default function Home() {
   <div className="hermes-glow" />
 
   <div className="hermes-planet">
-    <div className="hermes-light" />
-  </div>
+  <HermesWorld />
+</div>
   <div className="hermes-ring" />
   <div className="hermes-label">
     <span>HERMES</span>
