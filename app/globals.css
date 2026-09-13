@@ -40,6 +40,7 @@ body {
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
+  z-index: 2;
 }
 
 /* --------------------------------------------------
@@ -101,4 +102,59 @@ body {
 
 .scroll-cue span {
   display: inline-block;
+}
+/* --------------------------------------------------
+   ORBITAL SCENE
+-------------------------------------------------- */
+
+.orbit-scene {
+  position: relative;
+  min-height: 140vh;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  border: 1px solid rgba(243, 240, 232, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 110vw;
+  height: 55vw;
+}
+
+.orbit-two {
+  width: 75vw;
+  height: 38vw;
+  border-color: rgba(243, 240, 232, 0.055);
+  transform: translate(-50%, -50%) rotate(18deg);
+}
+
+.hermes-placeholder {
+  position: absolute;
+  left: 68%;
+  top: 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transform: translate(-50%, -50%);
+}
+
+.hermes-placeholder span {
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -0.03em;
+}
+
+.hermes-placeholder small {
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
 }
