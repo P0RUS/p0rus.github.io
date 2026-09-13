@@ -1,7 +1,11 @@
+import StarField from "@/components/StarField";
+
 export default function Home() {
   return (
     <main className="pantheon">
       <section className="threshold">
+        <StarField />
+
         <div className="threshold-content">
           <p className="welcome">WELCOME TO</p>
 

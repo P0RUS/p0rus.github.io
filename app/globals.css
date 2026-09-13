@@ -1,5 +1,5 @@
 :root {
-  --background: #090d12;
+  --background: #080c11;
   --foreground: #f3f0e8;
   --muted: #9b9da1;
 
@@ -28,6 +28,10 @@ body {
   background: var(--background);
 }
 
+/* --------------------------------------------------
+   THRESHOLD
+-------------------------------------------------- */
+
 .threshold {
   position: relative;
   min-height: 100vh;
@@ -35,9 +39,29 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  isolation: isolate;
 }
 
+/* --------------------------------------------------
+   STAR FIELD
+-------------------------------------------------- */
+
+.star-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------
+   CONTENT
+-------------------------------------------------- */
+
 .threshold-content {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 2rem;
 }
